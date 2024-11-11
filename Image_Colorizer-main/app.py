@@ -14,11 +14,9 @@ def colorizer(img):
     
     # Use relative paths based on the current script directory
     script_dir = os.path.dirname(__file__)
-    prototxt = "C:/Users/Prasad Thosar/OneDrive/Desktop/ACV ca2/Image_Colorizer-main/Image_Colorizer-main/models/models_colorization_deploy_v2.prototxt"
-    model = "C:/Users/Prasad Thosar/OneDrive/Desktop/ACV ca2/Image_Colorizer-main/Image_Colorizer-main/models/colorization_release_v2.caffemodel"
-    points = "C:/Users/Prasad Thosar/OneDrive/Desktop/ACV ca2/Image_Colorizer-main/Image_Colorizer-main/models/pts_in_hull.npy"
-
-
+    prototxt = r"C:\Users\Prasad Thosar\OneDrive\Desktop\ACV ca2\Image_Colorizer\Image_Colorizer-main\models\colorization_deploy_v2.prototxt"
+    model = r"C:\Users\Prasad Thosar\OneDrive\Desktop\ACV ca2\Image_Colorizer\Image_Colorizer-main\models\colorization_release_v2.caffemodel"
+    points = r"C:\Users\Prasad Thosar\OneDrive\Desktop\ACV ca2\Image_Colorizer\Image_Colorizer-main\models\pts_in_hull.npy"
     
     net = cv2.dnn.readNetFromCaffe(prototxt, model)
     pts = np.load(points)
